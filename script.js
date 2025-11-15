@@ -1,29 +1,36 @@
 function matchMood(mood) {
-  let result;
+  let resultText;
+  let imageFile;
 
   if (mood === "sad") {
-    result = "💔 Your Rod Wave vibe is: <br><b>'Last Sad Song'</b>";
+    resultText = "💔 Your Rod Wave vibe is: 'Last Sad Song'";
+    imageFile = "last_sad_song.jpg";
   } 
   else if (mood === "stressed") {
-    result = "😞 Your Rod Wave vibe is: <br><b>'Pieces'</b>";
+    resultText = "😞 Your Rod Wave vibe is: 'Pieces'";
+    imageFile = "pieces.jpg";
   }
   else if (mood === "angry") {
-    result = "🔥 Your Rod Wave vibe is: <br><b>'Chip on My Shoulder'</b>";
+    resultText = "🔥 Your Rod Wave vibe is: 'Chip on My Shoulder'";
+    imageFile = "chip_on_my_shoulder.jpg";
   }
   else if (mood === "calm") {
-    result = "😌 Your Rod Wave vibe is: <br><b>'True Story'</b>";
+    resultText = "😌 Your Rod Wave vibe is: 'True Story'";
+    imageFile = "true_story.jpg";
   }
   else if (mood === "motivated") {
-    result = "💪 Your Rod Wave vibe is: <br><b>'Soldier Life'</b>";
+    resultText = "💪 Your Rod Wave vibe is: 'Soldier Life'";
+    imageFile = "soldier_life.jpg";
   }
   else if (mood === "heartbroken") {
-    result = "💧 Your Rod Wave vibe is: <br><b>'Moving On'</b>";
+    resultText = "💧 Your Rod Wave vibe is: 'Moving On'";
+    imageFile = "moving_on.jpg";
   }
 
-  document.getElementById("result").innerHTML = result;
+  document.getElementById("result").innerHTML =
+    `<img src="${imageFile}" alt="Song cover" style="max‑width:200px; margin:10px;"><br>${resultText}`;
 
-  // Show reset button
-  document.getElementById("resetBtn").style.display = "inline-block";
+  document.getElementById("resetBtn").style.display = "inline‑block";
 }
 
 function resetApp() {
